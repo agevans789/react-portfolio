@@ -6,7 +6,7 @@ const LandingPage = ({projects, handleSearch}) => {
     // add search input area to handleSearch
     return (
         <div className="LandingPage">
-            <form>
+            <form type="search">
                 <input type="text">Search</input>
                 <button class="btn btn-primary" type="submit" onClick="">Search</button>
                 {projects.map((project) => (
