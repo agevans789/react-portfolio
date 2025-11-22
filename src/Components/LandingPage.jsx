@@ -13,7 +13,7 @@ const LandingPage = ({projects, onHandleSearch}) => {
     };
     return (
         <div className="LandingPage">
-            <form type="search" onSearch={onHandleSearch}>
+            <form type="search" onSubmit={onHandleSearch}>
                 <input type="text" aria-label="Large" aria-describedby="inputGroup-sizing-sm" placeholder="Search projects"></input>
                 <button className="btn btn-primary" type="submit">Search</button>
             </form>

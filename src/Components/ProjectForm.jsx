@@ -33,7 +33,7 @@ const ProjectForm = ({projects, onHandleAddNewProjects}) => {
                 <input type="text" className="form-control" placeholder="Project Name" value={name} onChange={(e) => setName(e.target.value)}></input>
                 <input type="text" className="form-control" placeholder="Project URL" value={url} onChange={(e) => setUrl(e.target.value)}></input>
                 <input type="text" className="form-control" placeholder="Project Image URL" value={image} onChange={(e) => setImage(e.target.value)}></input>
-                <textarea type="text" className="form-control" value={description} onChange={(e) => setDescription(e.target.value)}></textarea>
+                <textarea type="text" className="form-control" value={description} placeholder="Project Description" onChange={(e) => setDescription(e.target.value)}></textarea>
                 <button className="btn btn-primary" type="submit">Add Project</button>
             </form>
         </div>

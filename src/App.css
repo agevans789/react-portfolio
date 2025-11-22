@@ -57,3 +57,9 @@
   flex-direction: row;
   align-items: flex-start;
 }
+
+.ProjectForm {
+  margin: 20px 0;
+  display: flex;
+  flex-direction: column;
+}
