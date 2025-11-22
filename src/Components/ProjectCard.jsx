@@ -1,17 +1,16 @@
 import react from 'react';
-import {Link} from 'react-router-dom'
 
-const ProjectCard = ({project, addNewProject}) => {
+const ProjectCard = ({project, onHandleDelete}) => {
     return (
-        <Link to={project.url}>
-            <div class="card">
+        <div class="card">
                 <img src={project.image}></img>
-                <div className="card-body">
-                    <h5 class="card-title">{project.name}</h5>
-                    <p class="card-text">{project.description}</p>
-                </div>
+            <div className="card-body">
+                    <h5 className="card-title">{project.name}</h5>
+                    <p className="card-text">{project.description}</p>
+                    <a href={project.link} className="btn btn-primary">View Project</a> 
+                    <button className="btn btn-danger" onClick={() => onHandleDelete(project.id)}>Delete Project</button>
             </div>
-        </Link>
+        </div>
     )
 };
 
