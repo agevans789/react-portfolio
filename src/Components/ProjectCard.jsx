@@ -2,7 +2,7 @@ import react from 'react';
 
 const ProjectCard = ({project, onHandleDelete}) => {
     return (
-        <div class="card">
+        <div className="card">
                 <img src={project.image}></img>
             <div className="card-body">
                     <h5 className="card-title">{project.name}</h5>

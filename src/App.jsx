@@ -4,7 +4,7 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import LandingPage from './Components/LandingPage'
 import ProjectForm from './Components/ProjectForm'
-import projects from './projects'
+import projects from './projects.js'
 
 function App() {
   // be able to search through projects via text

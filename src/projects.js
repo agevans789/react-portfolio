@@ -12,3 +12,5 @@ const projects = [
         description: 1
     }
 ];
+
+export default projects;
