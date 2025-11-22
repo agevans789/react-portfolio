@@ -23,30 +23,23 @@ function App() {
 
   // add new projects
   // set up ternary operation 
-  const [previousProjects, setProjects] = useState(projects);
-  const addNewProjects = (projectToAdd) => {
+  const [currentProjects, setProjects] = useState(projects);
+  const addNewProjects = (projectToAdd, e) => {
     // check if project already exists
-    const projectExists = previousProjects.some(previousProject=> {
-      return previousProject.id === projectToAdd.id
+    const projectExists = currentProjects.some(currentProject => {
+      return currentProject.id === projectToAdd.id
       });
     // if project does not exist add to projects array
     if (!projectExists) {
-      setProjects([...projects, projectToAdd]);
+      setProjects((previousProjects) => [...previousProjects, projectToAdd]);
     };
   };
-  // submit this new list of products to be displayed when button is clicked
-  // pass event and data to add as arguments
-    const handleSubmit = (e, newProject) => {
-      // asynchronous
-      e.preventDefault();
-      // on submit the function that adds new projects will run
-      addNewProjects(newProject);
-    };
+  
   return (
     <div className="react-portfolio">
       <h1>Personal Project Showcase App</h1>
-      <LandingPage projects={projectsToDisplay} handleSearch={handleSearch}/>
-      <ProjectForm handleSubmit={handleSubmit}/>
+      <LandingPage projects={projectsToDisplay} onHandleSearch={handleSearch}/>
+      <ProjectForm onHandleAddNewProjects={addNewProjects}/>
     </div>
   )
 };
