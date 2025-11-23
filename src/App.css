@@ -45,6 +45,7 @@
   font-family: Arial, sans-serif;
   padding: 20px;
   text-align: left;
+}
   #search-input {
     padding: 8px;
     font-size: 16px;
@@ -60,7 +61,23 @@
     border: none;
     border-radius: 2px;
     cursor: pointer;  
-}}
+}
+  .btn-primary:hover {
+    background-color: #0056b3;
+  }
+  .project-list {
+    margin-top: 20px;
+  }
+  .project-list-header {
+    margin-bottom: 10px;
+  }
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  li {
+    margin-bottom: 16px;
+  }
 
 .card {
   border: 1px solid #ccc;
@@ -71,6 +88,12 @@
   display: flex;
   flex-direction: row;
   align-items: flex-start;
+}
+  #card-image {
+    width: 150px;
+    height: auto;
+    margin-right: 16px;
+    border-radius: 4px;
 }
 
 .ProjectForm {
