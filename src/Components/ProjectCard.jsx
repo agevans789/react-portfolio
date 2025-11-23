@@ -8,7 +8,7 @@ const ProjectCard = ({project, onHandleDelete, onHandleAddNewProjects}) => {
                     <h5 className="card-title">{project.name}</h5>
                     <p className="card-text">{project.description}</p>
                     <a href={project.url} className="btn btn-primary">View Project</a> 
-                    <button className="btn btn-danger" onClick={() => onHandleDelete(project.name)}>Delete Project</button>
+                    <button className="btn btn-danger" onClick={(e) => onHandleDelete(project.id, e)}>Delete Project</button>
             </div>
         </div>
     )

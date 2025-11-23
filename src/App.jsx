@@ -29,11 +29,10 @@ function App() {
       setProjects((previousProjects) => [...previousProjects, projectToAdd]);
     };
   };
-    const [deletedProjects, setDeletedProjects] = useState(projects);
     const handleDelete = (projectID, e) => {
       e.preventDefault();
-        const updatedProjects = projects.filter((project) => project.id !== projectID);
-        setDeletedProjects(updatedProjects);
+        const updatedProjects = currentProjects.filter((project) => project.id !== projectID);
+        setProjects(updatedProjects);
         console.log('Project deleted:', projectID);
         alert('Project has been deleted');
     };
@@ -41,17 +40,11 @@ function App() {
     // create array of items that were searched
   // filter projects based on search term
   // first filter out deleted projects and filter in current projects
-  const tempFilteredProjects = projects.filter((project) => {
-    return !deletedProjects.some((deletedProject) => deletedProject.id === project.id);
-  });
-
-  const refreshedProjects = [...currentProjects, ...tempFilteredProjects];
-  
-  const projectsToDisplay = refreshedProjects.filter((refreshedProject) => {
+  const projectsToDisplay = currentProjects.filter((currentProject) => {
       if (!search) {
           return true;
       };
-      return new RegExp(search, 'i').test(refreshedProject.name)
+      return new RegExp(search, 'i').test(currentProject.name)
   });
 
     
